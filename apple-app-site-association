@@ -2,6 +2,10 @@
     "applinks": {
         "apps": [],
         "details": [
+            {
+                "appID": "6A9WA9THGT.com.z2live.paradisebaydev",
+                "paths": [ "*" ]
+            }
         ]
     }
 }
