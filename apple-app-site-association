@@ -5,10 +5,6 @@
             {
                 "appID": "6A9WA9THGT.com.z2live.paradisebaydev",
                 "paths": [ "*" ]
-            },
-            {
-                "appID": "8862HDM9RV.com.z2live.paradisebaydev",
-                "paths": [ "*" ]
             }
         ]
     }
