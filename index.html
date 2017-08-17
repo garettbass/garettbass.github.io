@@ -2,8 +2,111 @@
 <html>
     <head>
         <title>garettbass.github.io</title>
+        <style>
+            .at::before { content: "\0040"; /* '@' */ }
+            .hyphen::before { content: "\002d"; /* '-' */ }
+            ul { margin-top:0; margin-left:-2.5rem; }
+            h1 { margin:0; }
+            html,body { font-family:"Courier New,monospace"; }
+        </style>
     </head>
     <body>
-        HELLO WORLD!
+        <!-- --------------------------------------------------------------------- -->
+        <h1>GARETT BASS</h1>
+        <div>6917 Fauntleroy Way SW<br>
+        Seattle, WA 98136<br>
+        <a href="tel:206HH601HH7018"
+            onclick="this.href=this.href.replace(/HH/,'&#45;')"
+        >206<span class="hyphen">601</span><span class="hyphen">7018</span></a><br>
+        <a href="mailto:meAAgarettbassDDcom"
+            onclick="this.href=this.href.replace(/AA/,'&#64;').replace(/DD/,'&#46;')"
+            >me<span class="at">garettbass.com</span></a><br>
+        <a href="https://garettbass.github.io"
+            >https://garettbass.github.io</a></div>
+
+        <!-- --------------------------------------------------------------------- -->
+        <!-- <h2>Summary</h2>
+        <blockquote>
+            <p>I am an experienced gameplay and tools programmer with a strong background
+            in C/C++.  Often I am the only programmer on a cross-disciplinary team,
+            working closely with artists, designers, writers, and localization to add new
+            game features or to improve toolchain workflow.  AI and character animation
+            are my primary areas of interest.</p>
+        </blockquote> -->
+
+        <!-- --------------------------------------------------------------------- -->
+        <h2><a href="http://z2.com/">Z2</a>|<a href="https://king.com/">King</a></h2>
+        <blockquote>
+            <b><a href="https://paradisebaygame.com/">Paradise Bay</a> (April 2017 - Present)</b>
+            <ul>
+                <li>Reduced client load time from 1.4 minutes to 45 seconds</li>
+                <li>Reduced server load permitting 50% more players per server</li>
+            </ul>
+
+            <b>Fiction Factory Engine/Editor (March 2016 - April 2017)</b>
+            <ul>
+                <li>Runtime configuration and profiling tools</li>
+                <li>Data-driven event system</li>
+            </ul>
+
+            <b>Zengine Engine/Editor (May 2013 - March 2016)</b>
+            <ul>
+                <li>Editors for entities, particle systems, animation states, etc.</li>
+                <li>A* navigation for RTS-style gameplay</li>
+                <li>Audio API with macOS/iOS, Android, and Windows implementations</li>
+                <!-- <li>Excel tooling for gameplay content balance</li> -->
+                <li>Runtime configuration and profiling tools</li>
+                <li>Lua debugger</li>
+            </ul>
+        </blockquote>
+
+        <!-- --------------------------------------------------------------------- -->
+        <h2><a href="https://www.arena.net/">ArenaNet</a></h2>
+        <blockquote>
+            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> NPC AI (December 2012 - May 2013)</b>
+            <ul>
+                <!-- <li>Persistence system for gameplay objects</li> -->
+                <li>Data-driven NPC behavior tree system</li>
+                <li>Navigation graph visual workflow improvements</li>
+                <li>Memory utilization improvements in existing systems</li>
+            </ul>
+
+            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> Localization/VO (August 2011 - December 2012)</b>
+            <ul>
+                <li>Automated import/export of voice-over and localization scripts</li>
+                <!-- <li>Eliminated redundant localization</li> -->
+                <li>Integrated voice-over and localization tools into text editor</li>
+                <li>Gender-specific voice-over support for foreign languages</li>
+            </ul>
+
+            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> Editor (May 2010 - August 2011)</b>
+            <ul>
+                <li>Data mining API (C++)</li>
+                <li>Custom search UI scripting (C#/Python)</li>
+                <li>Command binding system</li>
+                <li>Interactive content validation</li>
+            </ul>
+
+            <b>Wild Lands Editor (August 2007 - May 2010)</b>
+            <ul>
+                <li>Animation state machine editor</li>
+                <li>Schema-driven gameplay content editor</li>
+                <!-- <li>Template-based content prefab system</li> -->
+                <li>Interactive content validation</li>
+                <!-- <li>Multi-user editing</li> -->
+            </ul>
+        </blockquote>
+
+        <!-- --------------------------------------------------------------------- -->
+        <h2><a href="https://www.amazon.com/">Amazon</a></h2>
+        <blockquote>
+            <b>Developer Tools (May 2005 - August 2007)</b>
+        </blockquote>
+
+        <!-- --------------------------------------------------------------------- -->
+        <h2>University of Texas, Austin</h2>
+        <blockquote>
+            <b>Bachelor of Science, Computer Science, 3.5 GPA</b>
+        </blockquote>
     </body>
 </html>
