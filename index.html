@@ -4,24 +4,25 @@
         <title>garettbass.github.io</title>
         <style>
             .at::before { content: "\0040"; /* '@' */ }
+            .dot::before { content: "\002e"; /* '.' */ }
             .hyphen::before { content: "\002d"; /* '-' */ }
-            ul { margin-top:0; margin-left:-2.5rem; }
+            * { font-family:"Courier New"; }
+            ul { margin-top:0; padding-left:0; }
             h1 { margin:0; }
-            * { font-family:"Courier New,monospace"; }
         </style>
     </head>
     <body>
         <h1>GARETT BASS</h1>
         <div>6917 Fauntleroy Way SW<br>
         Seattle, WA 98136<br>
-        <a href="tel:206HH601HH7018"
-            onclick="this.href=this.href.replace(/HH/,'&#45;')"
-        >206<span class="hyphen">601</span><span class="hyphen">7018</span></a><br>
+        <a href="https://garettbass.github.io"
+            >https://garettbass.github.io</a><br>
         <a href="mailto:meAAgarettbassDDcom"
             onclick="this.href=this.href.replace(/AA/,'&#64;').replace(/DD/,'&#46;')"
-            >me<span class="at">garettbass.com</span></a><br>
-        <a href="https://garettbass.github.io"
-            >https://garettbass.github.io</a></div>
+            >me<span class="at">garettbass</span><span class="dot">com</span></a><br>
+        <a href="tel:206HH601HH7018"
+            onclick="this.href=this.href.replace(/HH/,'&#45;')"
+        >206<span class="hyphen">601</span><span class="hyphen">7018</span></a></div>
 
         <!-- =============================================================== -->
         <!-- <h2>Summary</h2>
@@ -103,7 +104,7 @@
         </blockquote>
 
         <!-- =============================================================== -->
-        <h2>University of Texas, Austin</h2>
+        <h2><a href="https://www.utexas.edu/">University of Texas, Austin</a></h2>
         <blockquote>
             <b>Bachelor of Science, Computer Science, 3.5 GPA</b>
         </blockquote>
