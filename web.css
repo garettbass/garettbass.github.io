@@ -68,9 +68,12 @@ h3 {
 }
 
 .date {
+    border: 1px solid grey;
+    border-radius: 0.125in;
     float: right;
-    width: 30%;
-    color: #888;
+    margin-right: 0.25in;
+    padding: 0 0.07in;
+    color: grey;
 }
 
 .fas,
