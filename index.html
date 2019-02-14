@@ -1,111 +1,511 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>garettbass.github.io</title>
-        <style>
-            .at::before { content: "\0040"; /* '@' */ }
-            .dot::before { content: "\002e"; /* '.' */ }
-            .hyphen::before { content: "\002d"; /* '-' */ }
-            * { font-family:"Courier New"; }
-            ul { margin-top:0; padding-left:0; }
-            h1 { margin:0; }
-        </style>
-    </head>
-    <body>
-        <h1>GARETT BASS</h1>
-        <div>6917 Fauntleroy Way SW<br>
-        Seattle, WA 98136<br>
-        <a href="https://garettbass.github.io"
-            >https://garettbass.github.io</a><br>
-        <a href="mailto:garettbassAAmeDDcom"
-            onclick="this.href=this.href.replace(/AA/,'&#64;').replace(/DD/,'&#46;')"
-            >garettbass<span class="at">me</span><span class="dot">com</span></a><br>
-        <a href="tel:206HH601HH7018"
-            onclick="this.href=this.href.replace(/HH/,'&#45;')"
-        >206<span class="hyphen">601</span><span class="hyphen">7018</span></a></div>
 
-        <!-- =============================================================== -->
-        <h2><a href="http://z2.com/">Z2</a>|<a href="https://king.com/">King</a></h2>
-        <blockquote>
-            <b><a href="https://paradisebaygame.com/">Paradise Bay</a> (April 2017 - Present)</b>
-            <ul>
-                <li>Reduced client load time by 25%</li>
-                <li>Reduced server load permitting 50% more players per server</li>
-            </ul>
+<head>
+    <title>garettbass.com</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Arimo:normal,bold,bolditalic" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: Arimo;
+            font-size: 0.13in;
+            line-height: 0.25in;
+            margin: 0;
+            padding: 0;
+        }
 
-            <b>Fiction Factory Engine/Editor (March 2016 - April 2017)</b>
-            <ul>
-                <li>Runtime configuration and profiling tools</li>
-                <li>Data-driven event system</li>
-            </ul>
+        h1,
+        h2,
+        h3,
+        blockquote,
+        p,
+        pre,
+        div {
+            padding: 0 0.25in;
+        }
 
-            <b>Zengine Engine/Editor (May 2013 - March 2016)</b>
-            <ul>
-                <li>Editors for
-                    <a href="images/CompositionEditor.mp4">prefabs</a>,
-                    <a href="images/MapEditor.mp4">maps</a>,
-                    <a href="images/ParticleSystemEditor.mp4">particles</a>,
-                    <a href="images/AnimationTriggerSetEditor.mp4">animations</a>
-                </li>
-                <li><a href="images/AssetBrowser.mp4">Asset browser</a> with 3D previews</li>
-                <li><a href="images/Navigation.mp4">A* navigation</a> for RTS-style gameplay</li>
-                <li><a href="images/LuaDebugger.png">Lua debugger</a></li>
-                <li>Runtime
-                    <a href="images/Tweaks.png">configuration</a> and
-                    <a href="images/Profiler.png">profiling</a> tools
-                </li>
-                <li>Audio API with macOS/iOS, Android, and Windows implementations</li>
-                <!-- <li>Excel tooling for gameplay content balance</li> -->
-            </ul>
-        </blockquote>
+        ul {
+            padding: 0 0.25in;
+        }
 
-        <!-- =============================================================== -->
-        <h2><a href="https://www.arena.net/">ArenaNet</a></h2>
-        <blockquote>
-            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> NPC AI (December 2012 - May 2013)</b>
-            <ul>
-                <!-- <li>Persistence system for gameplay objects</li> -->
-                <li>Data-driven NPC behavior tree system</li>
-                <li>Navigation graph visual workflow improvements</li>
-                <li>Memory utilization improvements in existing systems</li>
-            </ul>
+        h1 {
+            font-size: 0.4in;
+            font-weight: bold;
+            line-height: 0.5in;
+        }
 
-            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> Localization/VO (August 2011 - December 2012)</b>
-            <ul>
-                <li>Automated import/export of voice-over and localization scripts</li>
-                <!-- <li>Eliminated redundant localization</li> -->
-                <li>Integrated voice-over and localization tools into text editor</li>
-                <li>Gender-specific voice-over support for foreign languages</li>
-            </ul>
+        h2 {
+            font-size: 0.25in;
+            font-weight: bold;
+            margin: 0.25em 0;
+            padding: 0.25em 0.25in;
+        }
 
-            <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a> Editor (May 2010 - August 2011)</b>
-            <ul>
-                <li>Data mining API (C++)</li>
-                <li>Custom search UI scripting (C#/Python)</li>
-                <li>Command binding system</li>
-                <li>Interactive content validation</li>
-            </ul>
+        h3 {
+            font-size: 0.16in;
+            font-weight: bold;
+        }
 
-            <b>Wild Lands Editor (August 2007 - May 2010)</b>
-            <ul>
-                <li>Animation state machine editor</li>
-                <li>Schema-driven gameplay content editor</li>
-                <!-- <li>Template-based content prefab system</li> -->
-                <li>Interactive content validation</li>
-                <!-- <li>Multi-user editing</li> -->
-            </ul>
-        </blockquote>
+        /*--------------------------------------------------------------------*/
 
-        <!-- =============================================================== -->
-        <h2><a href="https://www.amazon.com/">Amazon</a></h2>
-        <blockquote>
-            <b>Developer Tools (May 2005 - August 2007)</b>
-        </blockquote>
+        .at::before {
+            content: "\0040";
+            /* '@' */
+        }
 
-        <!-- =============================================================== -->
-        <h2><a href="https://www.utexas.edu/">University of Texas, Austin</a></h2>
-        <blockquote>
-            <b>Bachelor of Science, Computer Science, 3.5 GPA</b>
-        </blockquote>
-    </body>
+        .dot::before {
+            content: "\002e";
+            /* '.' */
+        }
+
+        .hyphen::before {
+            content: "\002d";
+            /* '-' */
+        }
+
+        .name {
+            letter-spacing: 0.00912em;
+        }
+
+        .title {
+            font-size: 0.195in;
+        }
+
+        .stars {
+            float: right;
+        }
+
+        .date {
+            float: right;
+            width: 30%;
+            color: #888;
+        }
+
+        .fas,
+        .fab,
+        .far {
+            width: 0.15in;
+        }
+
+        /*--------------------------------------------------------------------*/
+
+        main {
+            background: white;
+            box-shadow: 0 0 0.25in rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            display: block;
+            margin: 0.5in auto;
+            width: 8.5in;
+            height: 11in;
+            overflow-y: scroll;
+        }
+
+        nav {
+            box-sizing: border-box;
+            float: left;
+            width: 32.5%;
+            height: 100%;
+            padding: 0.125in 0;
+            background: #0075A7;
+            color: white;
+        }
+
+        nav>section>div>a {
+            color: white;
+        }
+
+        nav>section>h2 {
+            background: #005C85;
+        }
+
+        article {
+            box-shadow: 0 0 0.125in rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            float: right;
+            width: 67.5%;
+            height: 100%;
+            padding: 0.125in 0;
+        }
+
+        article>section>h2 {
+            background: #F4F4F4;
+        }
+
+        article>section>span>blockquote {
+            margin-left: 0.125in;
+        }
+
+        @media print {
+            html {
+                /* transform: scale(0.75); */
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            main {
+                box-shadow: none;
+                margin: 0;
+                width: auto;
+                height: auto;
+            }
+
+            article {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <nav>
+            <h1 class="name">Garett Bass</h1>
+            <div class="title">Senior Software Engineer</div>
+            <section>
+                <h2>Contact</h2>
+                <div class="row"><i class="fas fa-globe-americas"></i>
+                    Seattle, Washington</div>
+                <div class="row"><i class="fab fa-html5"></i>
+                    <a href="https://garettbass.com">garettbass.com</a></div>
+                <div class="row"><i class="fas fa-phone-square"></i>
+                    <a href="tel:206HH601HH7018" onclick="this.href=this.href.replace(/HH/,'&#45;')">206<span
+                            class="hyphen">601</span><span class="hyphen">7018</span></a></div>
+                <div class="row"><i class="fas fa-envelope-square"></i>
+                    <a href="mailto:garettbassAAmeDDcom"
+                        onclick="this.href=this.href.replace(/AA/,'&#64;').replace(/DD/,'&#46;')">garettbass<span
+                            class="at">me</span><span class="dot">com</span></a></div>
+                <div class="row"><i class="fab fa-github-square"></i>
+                    <a href="https://github.com/garettbass">github.com/garettbass</a></div>
+                <div class="row"><i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/garettbass">linkedin.com/in/garettbass</a>
+                </div>
+                <div class="row"><i class="fab fa-twitter-square"></i>
+                    <a href="https://twitter.com/garett">@garett</a></div>
+            </section>
+            <section>
+                <h2>Languages</h2>
+                <div class="row">C/C++
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">C#
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">HTML
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Java
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Javascript
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Lua
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Objective-C
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Python
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Ruby
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <h2>Technologies</h2>
+                <div class="row">Android
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">AppKit
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Core Audio
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Direct3D 11
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">JNI
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Metal
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Node.js
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">OpenAL
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">OpenGL
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">OpenSL
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">UIKit
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Unity
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+                <div class="row">Win32
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+            </section>
+        </nav>
+
+        <article>
+            <div>
+                Senior Software Engineer with 11 years of game industry experience,<br>
+                and 17 years in software. Devoted to building self-contained, data-driven systems,<br>
+                and streamlined visual data editing workflows. My fellow developers are my customers.<br>
+            </div>
+            <section>
+                <h2>Experience</h2>
+                <span>
+                    <span class="date">2013 &ndash; 2019</span>
+                    <h3>Z2 | King | Activision Blizzard</h3>
+                    <blockquote>
+                        <b>TapCraft</b> - Multiplayer Action RPG, Unity, iOS, Android
+                        <ul>
+                            <li>Visual editing workflows in Unity scene view and inspector</li>
+                            <li>Behavior Tree system for AI and scripting, with flowchart-style editor</li>
+                            <li>Spreadsheet-style editing in Unity, and Excel import/export</li>
+                            <li>Localization workflow in Unity</li>
+                        </ul>
+                    </blockquote>
+                    <blockquote>
+                        <b><a href="https://paradisebaygame.com/">Paradise Bay</a></b> - Resource Management Sim,
+                        Zengine, iOS, Android, PC
+                        <ul>
+                            <li>Reduced client load time by 25%</li>
+                            <li>Reduced server load permitting 50% more players per server</li>
+                        </ul>
+                    </blockquote>
+                    <blockquote>
+                        <b>Fiction Factory</b> - King in-house engine, iOS, Android, PC, Web
+                        <ul>
+                            <li>Runtime configuration and profiling tools</li>
+                            <li>Data-driven event system</li>
+                        </ul>
+                    </blockquote>
+                    <blockquote>
+                        <b>Zengine</b> - Z2 in-house engine, iOS, Android, PC
+                        <ul>
+                            <li>Engine-integrated visual editors for
+                                <a href="images/CompositionEditor.mp4">prefabs</a>,
+                                <a href="images/MapEditor.mp4">maps</a>,
+                                <a href="images/AnimationTriggerSetEditor.mp4">animation events</a>, ...
+                            </li>
+                            <li><a href="images/AssetBrowser.mp4">Asset browser</a> with search and 3D previews</li>
+                            <li><a href="images/Navigation.mp4">A* navigation</a> for RTS-style gameplay</li>
+                            <li><a href="images/LuaDebugger.png">Lua debugger</a> for gameplay code</li>
+                            <!-- <li>Runtime
+                                <a href="images/Tweaks.png">configuration</a> and
+                                <a href="images/Profiler.png">profiling</a> tools
+                            </li> -->
+                            <li>Cross platform audio API with macOS/iOS, Android, and Windows backends</li>
+                            <li>Schema-driven extensible editor UI</li>
+                            <li>Excel import/export for gameplay content balance</li>
+                        </ul>
+                    </blockquote>
+                </span>
+                <span>
+                    <span class="date">2007 &ndash; 2013</span>
+                    <h3>ArenaNet | NCSOFT</h3>
+                    <blockquote>
+                        <b><a href="https://www.guildwars2.com/en/">Guild Wars 2</a></b> - MMORPG, ArenaNet in-house
+                        engine, PC
+                        <ul>
+                            <!-- <li>Data-driven NPC behavior tree system</li> -->
+                            <li>Navigation graph visual workflow</li>
+                            <li>Memory utilization improvements in existing systems</li>
+                            <li>Automated import/export of voice-over and localization scripts</li>
+                            <!-- <li>Eliminated redundant localization</li> -->
+                            <li>Integrated voice-over and localization tools into editor</li>
+                            <li>Gender-specific voice-over support for foreign languages</li>
+                            <li>Data mining API (C++) and search UI scripting (C#/Python)</li>
+                            <!-- <li>Command binding system</li> -->
+                            <li>Interactive content validation</li>
+                        </ul>
+                    </blockquote>
+                    <blockquote>
+                        <b>Wild Lands (unreleased)</b> - MMORPG, ArenaNet in-house
+                        engine, PC
+                        <ul>
+                            <!-- <li>Animation state machine editor</li> -->
+                            <li>Schema-driven gameplay content editor</li>
+                            <li>Template-based content prefab system</li>
+                            <li>Interactive content validation</li>
+                            <li>Multi-user editing</li>
+                        </ul>
+                    </blockquote>
+                </span>
+                <!-- <span>
+                    <span class="date">2005 &ndash; 2007</span>
+                    <h3>Amazon.com</h3>
+                </span> -->
+            </section>
+            <section>
+                <h2>Education</h2>
+                <span>
+                    <span class="date">2001 &ndash; 2006</span>
+                    <h3>University of Texas at Austin</h3>
+                </span>
+                <div class="row">
+                    Bachelor of Science, Computer Science
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+</body>
+
 </html>
