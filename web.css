@@ -135,3 +135,13 @@ article>section>h2 {
 article>section>span>blockquote {
     margin-left: 0.125in;
 }
+
+.page {
+    background: white;
+    box-shadow: 0 0 0.25in rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    display: block;
+    margin: 0.5in auto;
+    padding: 0;
+    width: 8.5in;
+}

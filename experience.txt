@@ -1,0 +1,46 @@
+Z2 | King | Activision Blizzard (2013-2019)
+
+    Unannounced - Multiplayer Action RPG, Unity, iOS, Android
+        * Behavior Tree AI, flowchart editor, in-game debugging, network synchronization
+        * Visual editing workflows in Unity scene view and inspector
+        * Spreadsheet editing in Unity, with Excel import/export
+        * Localization workflow in Unity
+
+    Paradise Bay - Resource Management Sim, Zengine, iOS, Android, PC
+        * Reduced client load time by 25%
+        * Reduced server load, permitting 50% more players per server
+
+    Fiction Factory - King in-house engine, iOS, Android, PC, Web
+        * Web-based runtime configuration and profiling tools
+        * Data-driven event system to bridge node-based scripting and native code
+
+    Zengine - Z2 in-house engine, iOS, Android, PC
+        * Visual editors for prefabs, maps, animation events, and more
+        * Asset browser with search and 3D previews
+        * A* navigation for RTS-style gameplay
+        * Web-based Lua debugger
+        * Web-based runtime configuration and profiling tools
+        * Audio API with macOS/iOS, Android, and Windows backends
+        * Schema-driven extensible editor UI
+        * Excel import/export for gameplay content balance
+
+ArenaNet | NCSOFT (2007-2013)
+
+    Guild Wars 2 - MMORPG, ArenaNet in-house engine, PC
+        * Data-driven NPC behavior tree system
+        * Navigation graph visual workflow
+        * Memory utilization improvements in existing systems
+        * Automated import/export of voice-over and localization scripts
+        * Integrated voice-over and localization tools into editor
+        * Gender-specific voice-over support for foreign languages
+        * Data mining API (C++) and search UI scripting (C#/Python)
+        * Interactive content validation
+
+    Wild Lands (unreleased) - MMORPG, ArenaNet in-house engine, PC
+        * Schema-driven gameplay content editor
+        * Animation state machine editor
+        * Template-based content prefab system
+        * Interactive content validation
+        * Multi-user editing for files under version control
+
+Amazon.com (2005-2007)
