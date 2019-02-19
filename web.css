@@ -143,5 +143,17 @@ article>section>span>blockquote {
     display: block;
     margin: 0.5in auto;
     padding: 0;
+    position: relative;
     width: 8.5in;
+}
+
+.github-link {
+    position: relative;
+    padding: 0;
+}
+
+.github-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
