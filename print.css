@@ -54,6 +54,10 @@
         border-left: 0.25px solid grey;
     }
 
+    article>section>h2 {
+        background: transparent;
+    }
+
     a {
         color: black;
         text-decoration: none;
@@ -61,6 +65,10 @@
 
     a[href]:after {
         content: none !important;
+    }
+
+    li {
+        line-height: 0.21in;
     }
 
     .no-print, .no-print *
