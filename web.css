@@ -26,7 +26,7 @@ ul {
 }
 
 li {
-    line-height: 0.22in;
+    line-height: 0.2in;
 }
 
 h1 {
@@ -133,6 +133,25 @@ article>section>h2 {
 
 article>section>span>blockquote {
     margin-left: 0.125in;
+}
+
+.page-content {
+    background: white;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 8.5in;
+}
+
+h.page-content {
+    padding: 0.2in;
+    font-weight: bold;
+    font-size: 0.25in;
+}
+
+p.page-content {
+    padding: 0.2in;
 }
 
 .page {
