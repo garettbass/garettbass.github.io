@@ -1,1 +1,0 @@
-import{r as t,h as n}from"./p-ed98ce0b.js";const o=class{constructor(n){t(this,n)}render(){return[n("ion-header",{translucent:!0},n("ion-toolbar",null,n("ion-buttons",{slot:"start"},n("ion-back-button",{defaultHref:"/"})),n("ion-title",null,"_name_"))),n("ion-content",{fullscreen:!0})]}};o.style="";export{o as component__template_}

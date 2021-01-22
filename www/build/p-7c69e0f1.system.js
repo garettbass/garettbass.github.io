@@ -1,1 +1,0 @@
-System.register(["./p-f3667d5f.system.js","./p-6a0a7df0.system.js"],(function(t){"use strict";var e,s;return{setters:[function(t){e=t.i},function(t){s=t.s}],execute:function(){s({experimentalTransitionShadow:true});const n=t("g",()=>{e()})}}}));

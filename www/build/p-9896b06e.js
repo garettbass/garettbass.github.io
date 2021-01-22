@@ -1,0 +1,1 @@
+import{m as a}from"./p-6f29a9af.js";const t=async t=>{const s=await a.get(t);return!(!s||!await s.isActive())};export{t as u}

@@ -1,1 +1,0 @@
-import{r as n,h as t}from"./p-ed98ce0b.js";const o=class{constructor(t){n(this,t)}render(){return[t("ion-header",{translucent:!0},t("ion-toolbar",null,t("ion-buttons",{slot:"start"},t("ion-back-button",{defaultHref:"/"})),t("ion-title",null,"Music"))),t("ion-content",{fullscreen:!0,class:"ion-padding"},t("h1",null,"Music"))]}};o.style="";export{o as component_tabs_music}

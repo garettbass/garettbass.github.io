@@ -1,1 +1,0 @@
-import{i as a}from"./p-a19aa8c2.js";import{s as o}from"./p-9c49a2b7.js";o({experimentalTransitionShadow:!0});const s=()=>{a()};export{s as g}

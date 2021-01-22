@@ -1,6 +1,6 @@
 {
-  "name": "Ionic Kitchen Sink",
-  "short_name": "Kitchen Sink",
+  "name": "ionic-pwa",
+  "short_name": "ionic-pwa",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
@@ -12,6 +12,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#3880ff",
-  "theme_color": "#3880ff"
+  "background_color": "#488aff",
+  "theme_color": "#488aff"
 }
