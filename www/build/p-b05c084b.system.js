@@ -1,0 +1,1 @@
+System.register(["./p-5f205b28.system.js"],(function(t){"use strict";var e;return{setters:[function(t){e=t.m}],execute:function(){const s=t("u",async t=>{const s=await e.get(t);return!!(s&&await s.isActive())})}}}));
