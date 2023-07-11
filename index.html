@@ -206,17 +206,45 @@
 
     </main>
 
-    <!-- <div class="page no-print">
+    <div class="page no-print">
         <h class="page-content">Rec Room Glass Prop</h>
-        <img width="100%" src="images/Glass.gif">
+        <video class="page-content" controls loop autoplay muted>
+            <source src="images/Glass.mp4" type="video/mp4">
+        </video>
         <p class="page-content">
-            
+            I implemented the shader for the glass prop in Rec Room, which
+            includes a few designer-configurable properties with some commentary
+            on their effect, such as:
+            <ul>
+                <li><b>Alpha Influence On Albedo</b> - The color of a transparent
+                surface is reduced by transparency as more of the incident light
+                passes through the surface instead of reflecting back to the
+                observer.</li>
+                <li><b>Fresnel Influence On Specular</b> - A transparent surface
+                is less reflective when viewed head on, as more light passes
+                through the surface.</li>
+                <li><b>Fresnel Influence On Alpha</b> - A transparent surface is
+                more reflective at a grazing angle, as less light passes
+                through the surface and more is reflected.</li>
+                <li><b>Refraction Index</b> - Configurable
+                refraction index.  Glass is usually around 1.5, but in Rec Room
+                we default to 2.0.</li>
+            </ul>
         </p>
-    </div> -->
+        <p class="page-content">
+            The shader uses the Fresnel term (evaluated via Schlick or Unity's
+            approximation, configurable per platform) to vary the alpha and
+            specular terms, where alpha corresponds to transmission, and
+            specular corresponds to reflection sampled from an environment map
+            or light probe.  Nothing particularly fancy here, but some basic
+            research made this look much more like glass than the basic Unity
+            transparent shader.
+        </p>
+    </div>
 
     <div class="page no-print">
         <h class="page-content">Animation Timeline for Unreal Engine 4</h>
-        <video class="page-content" controls>
+        <video class="page-content" controls loop autoplay muted>
             <source src="images/LouAnimTimeline.mp4" type="video/mp4">
         </video>
         <p class="page-content">
