@@ -87,8 +87,8 @@
                     <blockquote>
                         <b>Rec Room</b> - Creative/Social, Unity, PC/Console/VR/Mobile
                         <ul>
-                            <li>User Generated Content: Maker Pen tools, rangefinder, glass</li>
-                            <li>R&D: Instanced rendering, collision optimization</li>
+                            <li>User Generated Content tools, material conversion, glass</li>
+                            <li>Instanced rendering, collision optimization</li>
                         </ul>
                     </blockquote>
                 </span>
@@ -211,6 +211,45 @@
     </main>
 
     <div class="page no-print">
+        <h class="page-content">Material Conversion Workflow</h>
+        <video class="page-content" controls loop autoplay muted>
+            <source src="images/MaterialConversion.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            Rec Room Studio is an extension to the Unity Editor that enables
+            advanced creators to build some very sophisticated content for Rec
+            Room, including importing assets purchased from the Unity Asset
+            Store.  Third party assets invariably include shaders that will not
+            be present in the Rec Room game client, and manually creating
+            materials that were compatible with shaders in the Rec Room game
+            client was tedious and error prone.
+            Fortunately, the process is pretty easy to automate, and this tool
+            I created generally makes all of the right choices for you, but
+            still allows you override its mapping from third party material
+            properties to Rec Room material properties.
+        <br><br>
+            The left column lists all of the materials found in the creators
+            content that are currently unsupported by the Rec Room game client.
+            When a creator imports some new assets, this Material Conversion
+            window will appear to assist them in making the conversions
+            immediately, otherwise it will appear when a creator tries to upload
+            unsupported content to the game.  Expanding any of the items in the
+            left column will list all of the specific models using that
+            material, which can be helpful to identify a more representative
+            model to preview the conversion.
+        <br><br>
+            The top section of the right column lists all of the material
+            properties from the unsupported material, and allows creators to
+            choose which property of a Rec Room compatible material is a good
+            match for that property.  Some automatic matching is done by
+            a sequence of simple keyword heuristics, e.g mapping a property
+            named "Color" to the "Albedo" input of a Rec Room material.
+            The live preview at the bottom of the right column shows you what
+            you're getting before you commit to it.
+        </p>
+    </div>
+
+    <div class="page no-print">
         <h class="page-content">Rec Room Glass Prop</h>
         <video class="page-content" controls loop autoplay muted>
             <source src="images/Glass.mp4" type="video/mp4">
@@ -264,22 +303,45 @@
             character skeleton, have been retargeted to drive Lou's female
             character skeleton.
         </p>
+        <img width="100%" src="images/AnimationTimelineEvents.jpeg">
+        <p class="page-content">
+            The UI also has animation event tracks, used here
+            to trigger a particle system spawning stars from the "Confetti_P" event.
+            The whole multi-track UI is rendered by a single Slate widget that
+            implements a very basic, but capable, IMGUI API (not Dear IMGUI).
+            Typical Unreal Engine editor UI is a tree of Slate Widgets, each
+            mirroring the underlying state and subscribing to change events in
+            order to stay in sync.  Using that approach here could have been
+            very time consuming, requring many widgets and carefully synchronizing
+            the tree of widgets with the underlying data structures.
+            <br><br>
+            The advantages of an IMGUI approach were twofold.  First, a dynamic
+            UI can be rendered by traversing the underlying data
+            structures representing the collection of animations, their start
+            times, durations, and blend in/out times, and producing a relevant
+            UI element for each editable aspect, drawing the draggable time
+            ranges of each animiation track, draggable blend in/out markers,
+            and the draggable playback needle.  This doesn't require any
+            explicit synchronzation, and the UI elements always directly
+            represent the underlying state.<br><br>Second, Unreal's Live C++
+            support makes it trivial to recompile and reload the functions that
+            call the IMGUI API without having to restart the editor or the game
+            client.  This makes iterating on the features of the UI very quick,
+            since I can try something out and see the results within seconds.
+        </p>
+        <video class="page-content" controls loop autoplay muted>
+            <source src="images/DebugMenu.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            I used the same IMGUI Slate widget to create this debug menu for
+            the game, which enabled the design and QA teams to quickly select
+            a variety of gameplay state in order to start the gameplay with
+            specific progression, character stats, equipemtn, and specific
+            quest outcomes.  Here the mouse cursor is being directed by a
+            game controller, because this UI also needed to be easily accessible
+            on a console for QA.
+        </p>
     </div>
-
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.SelectionHistory">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.SelectionHistory.png">
-    </a>
-
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.ArrayDrawer">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.ArrayDrawer.png">
-    </a>
-
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.InspectInline">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.InspectInline.png">
-    </a>
 
     <div class="page no-print">
         <h class="page-content">Behavior Tree Bubbles</h>
@@ -309,19 +371,72 @@
         </p>
     </div>
 
-    <img class="page no-print" src="images/BehaviorEditing.png">
+    <div class="page no-print">
+        <h class="page-content">Behavior Tree Editor</h>
+        <img width="100%" src="images/BehaviorEditing.png">
+        <p class="page-content">
+            This screenshot shows the behavior tree editor UI.  I implemented
+            the underlying behavior tree system, and this editor, and game teams
+            could extend the behavior tree node base class to implement game-specific
+            game state checks and modifiers.
+        </p>
+    </div>
 
-    <video class="page no-print" controls loop>
-        <source src="images/SpreadsheetScrolling.mp4" type="video/mp4">
-    </video>
+    <div class="page no-print">
+        <h class="page-content">Spreadsheet Editor</h>
+        <video class="page-content" controls loop>
+            <source src="images/SpreadsheetScrolling.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            Building vast collections of game content, such as inventory items,
+            spells, and other special abilities, often benefit from tabular
+            data entry.  Excel and Google spreadsheets can offer a lot of
+            utility in this regard, and are often used, but can have some serious
+            drawbacks.  Spreadsheets often have very limited game-specific context,
+            unless it has been generated or manually entered, and they can be very
+            challenging to diff and merge.
+            <br><br>
+            This UI was very easy to render with high performance using Unity's
+            lowest level IMGUI APIs with very limited indirection.
+            Each row of the spreadsheet is represented by a separate asset file,
+            which makes diffing and merging very easy, and reduces the likelyhood of
+            conflicts between different designers, since they are often working
+            on different sections of the same content set.  Each cell of the
+            spreadsheet has all of the game-specific context available in the
+            editor, which makes it easy to select correct enum values, reference
+            assets of a specific type, or create new assets with well defined
+            default values.  It also benefits from specialized UI only availble
+            in the editor, such as the localization string selection popup.
+            <br><br>
+            This tabular data can still be exported to Excel in order to create
+            some useful data visualizations like graphs and charts, or to assign
+            vast swaths of values via formulas, and later imported from Excel
+            to apply changes only to the modified cells.
+        </p>
+        <img width="100%" src="images/SpreadsheetRows.png">
+    
+        <img width="100%" src="images/SpreadsheetCells.png">
+    
+        <img width="100%" src="images/SpreadsheetEnums.png">
+    
+        <img width="100%" src="images/SpreadsheetLoc.png">
+    </div>
 
-    <img class="page no-print" src="images/SpreadsheetRows.png">
 
-    <img class="page no-print" src="images/SpreadsheetCells.png">
+    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.SelectionHistory">
+        <img class="github-corner" src="images/github-corner-right.svg">
+        <img width="100%" src="images/UnityExtensions.SelectionHistory.png">
+    </a>
 
-    <img class="page no-print" src="images/SpreadsheetEnums.png">
+    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.ArrayDrawer">
+        <img class="github-corner" src="images/github-corner-right.svg">
+        <img width="100%" src="images/UnityExtensions.ArrayDrawer.png">
+    </a>
 
-    <img class="page no-print" src="images/SpreadsheetLoc.png">
+    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.InspectInline">
+        <img class="github-corner" src="images/github-corner-right.svg">
+        <img width="100%" src="images/UnityExtensions.InspectInline.png">
+    </a>
 
     <video class="page no-print" controls loop>
         <source src="images/CompositionEditor.mp4">
@@ -343,7 +458,18 @@
         <source src="images/Navigation.mp4">
     </video>
 
-    <img class="page no-print" src="images/LuaDebugger.png">
+    <div class="page no-print">
+        <h class="page-content">Lua Debugger</h>
+        <img width="100%" src="images/LuaDebugger.png">
+        <p class="page-content">
+            I implemented a web-based Lua debugger that is hosted by the game client, so
+            that our gameplay team could connect to a debug build of the game on a mobile
+            device and debug their code as it ran on the device.  For those who
+            may recognize it, the appearance of the debugger is very heavily
+            inspired by the Xcode interface at the time 🤓.
+        </p>
+    </div>
+
 
     <img class="page no-print" src="images/Profiler.png">
 
