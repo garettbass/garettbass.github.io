@@ -15,6 +15,17 @@ div {
     padding: 0 0.25in;
 }
 
+code {
+    font-family: monospace;
+    font-size: 0.11in;
+    background-color: #0001;
+    border-color: #0002;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
 pre {
     display: inline;
     font-family: monospace;

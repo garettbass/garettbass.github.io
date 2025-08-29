@@ -306,7 +306,7 @@
         <img width="100%" src="images/AnimationTimelineEvents.jpeg">
         <p class="page-content">
             The UI also has animation event tracks, used here
-            to trigger a particle system spawning stars from the "Confetti_P" event.
+            to trigger a particle system spawning stars from the <code>Confetti_P</code> event.
             The whole multi-track UI is rendered by a single Slate widget that
             implements a very basic, but capable, IMGUI API (not Dear IMGUI).
             Typical Unreal Engine editor UI is a tree of Slate Widgets, each
@@ -323,7 +323,9 @@
             ranges of each animiation track, draggable blend in/out markers,
             and the draggable playback needle.  This doesn't require any
             explicit synchronzation, and the UI elements always directly
-            represent the underlying state.<br><br>Second, Unreal's Live C++
+            represent the underlying state.
+            <br><br>
+            Second, Unreal's Live C++
             support makes it trivial to recompile and reload the functions that
             call the IMGUI API without having to restart the editor or the game
             client.  This makes iterating on the features of the UI very quick,
@@ -422,41 +424,109 @@
         <img width="100%" src="images/SpreadsheetLoc.png">
     </div>
 
+    <div class="page no-print">
+        <h class="page-content">Unity Extensions</h>
+        <p class="page-content">
+            Around 2016, we started using Unity for our latest mobile game
+            project at Z2.  I was really excited by the ease of extending Unity's
+            editor UI, and created a variety of simple extensions in my
+            free time.  I put these up on GitHub, then I would introduce them
+            into our projects at work, just like any other open source
+            dependency.<br><br>The <code>Selection History</code> project was so
+            handy that it found its way into the Rec Room code base and has
+            been carefully upgraded each time a new version of Unity was adopted
+            for Rec Room development 🤓.
+        </p>
+        <a class="page-content github-link" href="https://github.com/garettbass/UnityExtensions.SelectionHistory">
+            <img class="github-corner" src="images/github-corner-right.svg">
+            <img width="100%" src="images/UnityExtensions.SelectionHistory.png">
+        </a>
+        <a class="page-content github-link" href="https://github.com/garettbass/UnityExtensions.ArrayDrawer">
+            <img class="github-corner" src="images/github-corner-right.svg">
+            <img width="100%" src="images/UnityExtensions.ArrayDrawer.png">
+        </a>
+        <a class="page-content github-link" href="https://github.com/garettbass/UnityExtensions.InspectInline">
+            <img class="github-corner" src="images/github-corner-right.svg">
+            <img width="100%" src="images/UnityExtensions.InspectInline.png">
+        </a>
+    </div>
 
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.SelectionHistory">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.SelectionHistory.png">
-    </a>
+    <div class="page no-print">
+        <h class="page-content">Zengine Editors</h>
+        <video class="page-content" controls loop>
+            <source src="images/CompositionEditor.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            I joined the mobile game studio, Z2, in 2013, and I built all of the
+            content editing tools for their in-house engine.  We were all working
+            on Macs to build and debug for iOS and Android, so I built all of the
+            editor UI in Cocoa.  It was easy to integrate the game engine into
+            the tools, which made for a very satisfying preview experience.  The
+            editor could live edit the configuration data for the engine, which
+            was all based on Google protocol buffers, then reload that data to
+            generate an interactive preview.  I leaned on protocol buffer
+            reflection data to generate the UI hierarchy view and property
+            editor, which allowed me to quickly build a variety of editors all
+            driven by a common implementation.  These tools all supported
+            cut/copy/paste and undo/redo.
+            <br><br>
+            The <code>Composition Editor</code> shown above was used by the design team to
+            combine a variety of gameplay components and art assets to create
+            new objects for the two games in development at the time, <code>Paradise
+            Bay</code> and <code>Battle Nations 2</code>.
+        </p>
+        <video class="page-content" controls loop>
+            <source src="images/MapEditor.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            The <code>Map Editor</code> allowed the design team to quickly build
+            out environments by placing instances of objects that were designed
+            in the <code>Composition Editor</code>.
+        </p>
+        <video class="page-content" controls loop>
+            <source src="images/AnimationTriggerSetEditor.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            The <code>Animation Trigger Set Editor</code> enabled the art team to
+            define which animations should be played when certain in-game events
+            occurred.
+        </p>
+        <video class="page-content" controls loop>
+            <source src="images/AssetBrowser.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            I created this <code>Asset Browser</code> to help the art and design
+            teams quickly locate specific assets as our library of assets grew.
+            All of the other tools that needed to reference assets could bring up
+            the asset browser.  The preview images were cached, but could be
+            rerendered as needed if the image were older than the asset or its
+            dependencies.  Previews were rendered by making HTTP requests to a
+            headless instance of the game engine.
+        </p>
+    </div>
 
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.ArrayDrawer">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.ArrayDrawer.png">
-    </a>
-
-    <a class="page no-print github-link" href="https://github.com/garettbass/UnityExtensions.InspectInline">
-        <img class="github-corner" src="images/github-corner-right.svg">
-        <img width="100%" src="images/UnityExtensions.InspectInline.png">
-    </a>
-
-    <video class="page no-print" controls loop>
-        <source src="images/CompositionEditor.mp4">
-    </video>
-
-    <video class="page no-print" controls loop>
-        <source src="images/MapEditor.mp4">
-    </video>
-
-    <video class="page no-print" controls loop>
-        <source src="images/AnimationTriggerSetEditor.mp4">
-    </video>
-
-    <video class="page no-print" controls loop>
-        <source src="images/AssetBrowser.mp4">
-    </video>
-
-    <video class="page no-print" controls loop>
-        <source src="images/Navigation.mp4">
-    </video>
+    <div class="page no-print">
+        <h class="page-content">Grid-Based A* Navigation</h>
+        <video class="page-content" controls loop>
+            <source src="images/Navigation.mp4" type="video/mp4">
+        </video>
+        <p class="page-content">
+            One of our games featured units that could be directed to move around
+            the map, and initially we used Recast/Detour for navigation queries.
+            However, we started to find some literal corner cases where Detour
+            would provide some very counterintuitive paths where the Recast
+            dataset had generated very long, thin triangles.  Since our game was
+            grid-based anyway, I wrote up a grid-based A* implementation which
+            was a much better fit for our game environments.  The implementation
+            only supported two layers to the map, so we could have paths that
+            passed under and over bridges.<br><br>Navigable areas were visualized by
+            a colored checkerboard grid overlay in the map editor, and disconnected,
+            unreachable areas appeared in a different color, such as the light purple
+            area between the mountains in the background.  The map was rendered
+            from an overhead view to generate a height map from the depth buffer
+            which was then used to identify navigable areas and reachability.
+        </p>
+    </div>
 
     <div class="page no-print">
         <h class="page-content">Lua Debugger</h>
@@ -469,7 +539,6 @@
             inspired by the Xcode interface at the time 🤓.
         </p>
     </div>
-
 
     <img class="page no-print" src="images/Profiler.png">
 
